@@ -1,11 +1,13 @@
 window.APP =
 
   viewportSizeTest: ->
-    $testEl = $( "<div id=\"vw-test\">" )
     $viewport = $( window )
+    $testEl = $( "<div id=\"vw-test\">" )
     $testEl.appendTo( "body" ).css
       width: "100vw"
-    return $testEl.width() == $viewport.width()
+    support = $testEl.width() == $viewport.width()
+    $testEl.remove()
+    return support
 
   enableRepaints: ->
     $repaint = $( "h1, code" )
@@ -14,6 +16,7 @@ window.APP =
       
   initFitText: ->
     $( ".vw" ).fitText( .53 )
+    $( "<div class=\"using-fittext\">Using FitText</div>" ).appendTo( "body" )
         
   # Initializers
   common:

@@ -4,15 +4,27 @@
 }
 
 h1.vw {
+  font-size: 12em;
   font-size: 21vw;
   margin: 0;
 }
 h1.vh {
+  font-size: 10em;
   font-size: 10vh;
   margin: 0;
 }
 
 code {
-  font-size: 5vw;
+  font-size: 4vh;
   font-family: monospace;
+}
+
+.using-fittext {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #78C5F0;
+  background: rgba(#78C5F0, .8);
+  border-radius: 0 0 0 10px;
+  padding: .5em;
 }
