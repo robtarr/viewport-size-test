@@ -77,13 +77,15 @@ UTIL = {
 
   window.APP = {
     viewportSizeTest: function() {
-      var $testEl, $viewport;
-      $testEl = $("<div id=\"vw-test\">");
+      var $testEl, $viewport, support;
       $viewport = $(window);
+      $testEl = $("<div id=\"vw-test\">");
       $testEl.appendTo("body").css({
         width: "100vw"
       });
-      return $testEl.width() === $viewport.width();
+      support = $testEl.width() === $viewport.width();
+      $testEl.remove();
+      return support;
     },
     enableRepaints: function() {
       var $repaint;
@@ -93,7 +95,8 @@ UTIL = {
       });
     },
     initFitText: function() {
-      return $(".vw").fitText(.53);
+      $(".vw").fitText(.53);
+      return $("<div class=\"using-fittext\">Using FitText</div>").appendTo("body");
     },
     common: {
       init: function() {

@@ -406,3 +406,14 @@ code {
   font-size: 4vh;
   font-family: monospace;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/rob\/my-projects\/viewport-size-test\/scss\/_styles\.scss}line{font-family:\0000322}}
+.using-fittext {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #78C5F0;
+  background: rgba(120, 197, 240, 0.8);
+  border-radius: 0 0 0 10px;
+  padding: .5em;
+}
