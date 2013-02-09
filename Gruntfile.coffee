@@ -107,6 +107,8 @@ module.exports = (grunt) ->
         command: "mkdir -p dist/images; cp -R images/ dist/images/"
       copyRootDirectory:
         command: "cp -Rp root-directory/ dist/"
+      copyDevModernizr:
+        command: "mkdir dist/js/libs/; cp js/libs/modernizr-dev.js dist/js/libs/modernizr.min.js"
 
     jasmine:
       src: "dist/**/*.js"
@@ -130,7 +132,7 @@ module.exports = (grunt) ->
   grunt.registerTask "partials", [ "clean:partials", "concat:partials" ]
 
   # Clean, compile and concatenate JS
-  grunt.registerTask "javascript", [ "clean:javascript", "coffee", "concat:js", "jasmine" ]
+  grunt.registerTask "javascript", [ "clean:javascript", "coffee", "concat:js", "jasmine", "exec:copyDevModernizr" ]
 
   # Clean and compile stylesheets
   grunt.registerTask "stylesheets", ["clean:stylesheets", "compass"]
