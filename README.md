@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 project-init
 ===============
 
@@ -27,3 +28,9 @@ To get started:
 * Add concat only on dist
 * Add livereload
 * Add bash script for easy install
+=======
+viewport-size-test
+==================
+
+A test of the viewport size units
+>>>>>>> 76f30f89897aae9acdf2ddb59637315861d1a316
